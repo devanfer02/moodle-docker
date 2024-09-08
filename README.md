@@ -7,9 +7,17 @@
 - Docker
 
 ## Installation
-1. Copy the .env.example variables to .env file and configure the variables
+1. Clone this repository
+```zsh
+git clone https://github.com/devanfer02/moodle-docker.git
+```
+2. Copy the .env.example file to .env
+```zsh
+cp .env.example .env
+```
+3. Configure the env variables in .env file
 
-2. Just compose up!
+2. After that, just compose up!
 ```zsh
 docker compose up -d
 ```

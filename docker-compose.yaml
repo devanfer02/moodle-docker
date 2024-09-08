@@ -35,7 +35,7 @@ services:
     volumes:
       - moodledb_data:/bitnami/mariadb
     healthcheck:
-      test: ["CMD", "mariadb-admin", "ping", "-h", "localhost", "-u", "root", "-p'root'"]
+      test: ["CMD", "mariadb-admin", "ping", "-h", "localhost", "-u", "root", "-p'${DB_ROOT_PASSWORD}'"]
       start_period: 10s
       interval: 10s
       timeout: 10s
