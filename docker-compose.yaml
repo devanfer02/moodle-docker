@@ -21,6 +21,8 @@ services:
     volumes:
       - moodlesrv_data:/bitnami/moodle
       - moodledata_data:/bitnami/moodledata
+    networks:
+      - moodle-network
   moodledb:
     image: bitnami/mariadb:11.5.2
     environment:
@@ -38,7 +40,8 @@ services:
       interval: 10s
       timeout: 10s
       retries: 3
-        
+    networks:
+      - moodle-network
 
 volumes:
   moodledb_data:
