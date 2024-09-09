@@ -22,7 +22,6 @@ cp .env.example .env
 docker compose up -d
 ```
 
-
 5. Check your moodle server logs to see if its running install script or not
 ```zsh
 docker logs -f YOUR_MOODLE_CONTAINER_NAME
