@@ -1,5 +1,6 @@
 services:
   moodleserver:
+    container_name: moodle
     image: bitnami/moodle:4.4.3
     depends_on:
       moodledb:
@@ -24,6 +25,7 @@ services:
     networks:
       - moodle-network
   moodledb:
+    container_name: moodledb
     image: bitnami/mariadb:11.5.2
     environment:
       - MARIADB_USER=${DB_USER} 
